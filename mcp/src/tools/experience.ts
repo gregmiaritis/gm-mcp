@@ -9,9 +9,9 @@ export function registerExperienceTools(server: McpServer) {
     {
       title: "List work experience",
       description:
-        "Lists all professional roles in reverse-chronological order. Returns id, " +
+        "Lists all professional roles. Returns id, " +
         "company, title, dates, and a one-line summary per role. Use get_role with " +
-        "an id for full details and achievements.",
+        "an id for full details.",
       inputSchema: {},
     },
     async () => {

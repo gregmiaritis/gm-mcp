@@ -10,8 +10,7 @@ export function registerProjectTools(server: McpServer) {
       title: "List projects",
       description:
         "Lists side projects and major independent builds (e.g. Silo — an internal " +
-        "platform with its own MCP server; .less (pointless-code) — satirical open source " +
-        "Docker projects). Use get_project for detail.",
+        "platform with its own MCP server). Use get_project for detail.",
       inputSchema: {},
     },
     async () => {

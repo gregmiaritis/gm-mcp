@@ -9,11 +9,8 @@ export function registerSearchTools(server: McpServer) {
     {
       title: "Search everything",
       description:
-        "Full-text search across all experience, projects, and evidence. Use this " +
-        "for any question the structured tools don't answer directly, e.g. " +
-        "'government APIs', 'Greek character encoding', 'CI/CD'. Returns ranked " +
-        "matches with highlighted snippets and pointers (kind + id) you can follow " +
-        "up with get_role or get_project.",
+        "Full-text search across experience and projects. Use it for anything the " +
+        "other tools don't answer directly, e.g. 'government APIs' or 'CI/CD'.",
       inputSchema: {
         query: z
           .string()
