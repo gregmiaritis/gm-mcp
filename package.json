@@ -1,0 +1,27 @@
+{
+  "name": "grigorios-miaritis-cv-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && esbuild mcp/src/server.ts --bundle --platform=node --format=esm --packages=external --outfile=mcp/dist/server.js",
+    "start": "node mcp/dist/server.js",
+    "dev": "tsx watch mcp/src/server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@posthog/mcp": "^0.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "pg": "^8.13.0",
+    "posthog-node": "^5.39.4",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.11.0",
+    "esbuild": "^0.28.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
