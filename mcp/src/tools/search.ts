@@ -30,7 +30,7 @@ export function registerSearchTools(server: McpServer) {
       if (rows.length === 0)
         return json({
           results: [],
-          hint: "No matches. Try broader terms, or ask via match_to_requirement.",
+          hint: "No matches. Try broader terms.",
         });
       return json({ results: rows });
     },

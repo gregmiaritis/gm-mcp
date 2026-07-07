@@ -8,10 +8,9 @@ export function registerPointlessFactTools(server: McpServer) {
     {
       title: "Get a pointless fact",
       description:
-        "Returns one absurd-but-true fact about pointless-code, Grigorios' open source " +
-        "brand of deliberately worthless Docker projects (including a fully " +
-        "functional blockchain that mines coins with no value). Objectively " +
-        "unnecessary. Dubious shareholder value. Call it anyway.",
+        "Returns one absurd-but-true fact about .less (pointless-code), Grigorios' open source " +
+        "brand of deliberately worthless Docker projects (including an escape room " +
+        "called CortexForge). Worth checking.",
       inputSchema: {},
     },
     async () => {
@@ -20,7 +19,7 @@ export function registerPointlessFactTools(server: McpServer) {
       );
       return json(
         rows[0] ?? {
-          fact: "The facts table is empty, which is itself quite pointless.",
+          fact: "The facts table is empty, which is itself quite .less.",
         },
       );
     },
