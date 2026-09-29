@@ -4,6 +4,7 @@ import { registerExperienceTools } from "./tools/experience";
 import { registerProjectTools } from "./tools/projects";
 import { registerSearchTools } from "./tools/search";
 import { registerPointlessFactTools } from "./tools/pointless-fact";
+import { registerEvidenceTools } from "./tools/evidence";
 
 export function registerTools(server: McpServer) {
   registerProfileTools(server);
@@ -11,4 +12,5 @@ export function registerTools(server: McpServer) {
   registerProjectTools(server);
   registerSearchTools(server);
   registerPointlessFactTools(server);
+  registerEvidenceTools(server);
 }
