@@ -9,8 +9,9 @@ export function registerSearchTools(server: McpServer) {
     {
       title: "Search everything",
       description:
-        "Full-text search across experience and projects. Use it for anything the " +
-        "other tools don't answer directly, e.g. 'government APIs' or 'CI/CD'.",
+        "Full-text search across experience, projects, and evidence. Use it for " +
+        "anything the other tools don't answer directly, e.g. 'government APIs' " +
+        "or 'CI/CD'.",
       inputSchema: {
         query: z
           .string()
@@ -33,7 +34,10 @@ export function registerSearchTools(server: McpServer) {
           results: [],
           hint: "No matches. Try broader terms.",
         });
-      return json({ results: rows });
+      const results = rows.map((r) =>
+        /^\d+$/.test(String(r.id)) ? { ...r, id: Number(r.id) } : r,
+      );
+      return json({ results });
     },
   );
 }
